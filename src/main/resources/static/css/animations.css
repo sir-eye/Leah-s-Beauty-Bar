@@ -1,0 +1,42 @@
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply Animation to Elements */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+/* Smooth Transition for Dark Mode */
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.dark-mode nav, 
+.dark-mode .login-container, 
+.dark-mode .register-container, 
+.dark-mode .table-container {
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.dark-mode th, 
+.dark-mode table {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Dark Mode Toggle Button Animation */
+#dark-mode-toggle {
+    transition: background 0.3s, transform 0.2s;
+}
+
+#dark-mode-toggle:hover {
+    transform: scale(1.1);
+}

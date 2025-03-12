@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Home Inventory</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/animations.css">
+    <script src="../static/js/inventory.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="../static/images/logo.png" alt="Home Inventory Logo">
+        </div>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Menu ⬇️</a>
+                <div class="dropdown-content">
+                    <a href="index.html">Login</a>
+                    <a href="register.html">Register</a>
+                    <a href="about.html">About</a>
+                </div>
+            </li>
+            <li>
+                <button id="dark-mode-toggle">🌙 Dark Mode</button>
+            </li>
+        </ul>
+    </nav>
+    
+
+<!-- About Section -->
+<section class="about-container fade-in">
+    <img src="../static/images/banner.jpg" alt="Inventory Management" class="banner-image fade-in">
+    <h2>About Home Inventory Manager</h2>
+    <p>This tool helps users track household items, locations, and quantities.</p>
+</section>
+
+
+    <!-- Inventory Table -->
+    <div class="table-container fade-in">
+        <h2>Sample Inventory</h2>
+        <table id="inventory-table">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Location</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be inserted dynamically using JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

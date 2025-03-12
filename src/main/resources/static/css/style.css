@@ -1,0 +1,289 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 50px;
+    display: block;
+}
+
+/* Background Image */
+body {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Banner Image */
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    padding: 15px;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+    background: #ddd;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Center Login Container */
+.login-container {
+    width: 350px;
+    margin: 100px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center the form contents */
+}
+
+/* Input Fields */
+.login-container input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Login Button */
+.login-container button {
+    width: 95%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-container button:hover {
+    background: #555;
+}
+
+/* Fix Image Inside Form */
+.form-image {
+    width: 100px; /* Adjust size */
+    height: auto;
+    margin: 10px auto; /* Center the image */
+    display: block;
+}
+
+
+/* Form Images */
+.form-image {
+    display: block;
+    margin: 0 auto 20px;
+    width: 80px;
+    height: auto;
+}
+
+/* Table Styles */
+.table-container {
+    width: 80%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+    transition: 0.3s;
+}
+/* Register Form Styles */
+.register-container {
+    width: 350px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register-container input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.register-container button {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.register-container button:hover {
+    background: #555;
+}
+/* Button Hover Effect */
+button {
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #555;
+    transform: scale(1.05);
+}
+
+/* Link Hover Effect */
+.nav-links a {
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+    border-bottom: 2px solid white;
+}
+
+/* Table Row Hover Effect */
+tr:hover {
+    background-color: #ccc;
+    transition: background 0.3s;
+}
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #222;
+    color: #f4f4f4;
+}
+
+/* Navbar in Dark Mode */
+.dark-mode nav {
+    background-color: #111;
+}
+
+/* Links in Dark Mode */
+.dark-mode .nav-links a {
+    color: #f4f4f4;
+}
+
+.dark-mode .nav-links a:hover {
+    color: #bbb;
+    border-bottom: 2px solid #bbb;
+}
+
+/* Buttons in Dark Mode */
+.dark-mode button {
+    background: #444;
+    color: white;
+}
+
+.dark-mode button:hover {
+    background: #666;
+}
+
+
+/* Forms in Dark Mode */
+.dark-mode .login-container,
+.dark-mode .register-container {
+    background: #333;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Tables in Dark Mode */
+.dark-mode .table-container {
+    background: #333;
+}
+
+.dark-mode table {
+    background: #444;
+    color: white;
+}
+
+.dark-mode th {
+    background: #555;
+}

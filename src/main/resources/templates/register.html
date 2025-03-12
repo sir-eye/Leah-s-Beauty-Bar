@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Home Inventory</title>
+    <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/animations.css}">
+    <script th:src="@{/assets/js/main.js}" defer></script>
+
+    <style>
+        h2 {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <div class="logo">
+        <img th:src="@{/assets/images/logo.png}" alt="Leah's Beauty Bar Logo">
+    </div>
+    <ul class="nav-links">
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Menu ⬇️</a>
+            <div class="dropdown-content">
+                <a th:href="@{/users/login}">Home</a>
+                <a th:href="@{/users/register}">Register</a>
+                <a th:href="@{/about}">About</a>
+            </div>
+        </li>
+        <li>
+            <button id="dark-mode-toggle">🌙 Dark Mode</button>
+        </li>
+    </ul>
+</nav>
+
+<!-- Registration Form -->
+<section class="register-container fade-in">
+    <h2>Register</h2>
+    <img th:src="@{/assets/images/register.png}" alt="Register Illustration" class="form-image fade-in">
+    <form th:action="@{/users/register}" method="post" th:object="${user}" id="register-form" class="fade-in">
+        <label for="username">Username:</label>
+        <input type="text" id="username" th:field="*{username}" name="username" required pattern="^[a-zA-Z0-9]{4,12}$">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" th:field="*{email}" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" th:field="*{password}" name="password" required pattern=".{6,}">
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <button type="submit">Register</button>
+    </form>
+</section>
+
+</body>
+</html>

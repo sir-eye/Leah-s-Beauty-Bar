@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Leah's Beauty Bar</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/fonts.css}">
+    <link rel="stylesheet" th:href="@{/css/animations.css}">
+    <script th:src="@{/js/main.js}" defer></script>
+</head>
+<body th:style="|background-image: url('@{/images/login-bg.jpg}'); background-size: cover; background-position: center;|">
+<!-- Navigation Bar -->
+<nav>
+    <div class="logo">
+        <img th:src="@{/images/logo.png}" alt="Leah's Beauty Bar Logo">
+    </div>
+    <ul class="nav-links">
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Menu ⬇️</a>
+            <div class="dropdown-content">
+                <a th:href="@{/users/login}">Home</a>
+                <a th:href="@{/users/register}">Register</a>
+                <a th:href="@{/about}">About</a>
+            </div>
+        </li>
+        <li>
+            <button id="dark-mode-toggle">🌙 Dark Mode</button>
+        </li>
+    </ul>
+</nav>
+
+<!-- Login Form -->
+<section class="login-container fade-in">
+    <h2>Login</h2>
+    <img th:src="@{/images/logo.png}" alt="Login Illustration" class="form-image fade-in">
+    <form th:action="@{/users/login}" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+</section>
+
+</body>
+</html>
