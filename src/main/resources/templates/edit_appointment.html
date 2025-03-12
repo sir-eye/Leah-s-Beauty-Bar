@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Appointments</title>
+  <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+  <link rel="stylesheet" th:href="@{/assets/css/animations.css}">
+  <script th:src="@{/assets/js/main.js}" defer></script>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav>
+  <div class="logo">
+    <img th:src="@{/assets/images/logo.png}" alt="Leah's Beauty Bar Logo">
+  </div>
+  <ul class="nav-links">
+    <li><a th:href="@{/users/login}">Home</a></li>
+    <li><a th:href="@{/users/appointments}">Dashboard</a></li>
+    <li><a th:href="@{/logout}">Logout</a></li>
+  </ul>
+</nav>
+<h2>Edit Appointment</h2>
+
+
+<form th:action="@{/users/appointments/update/{id}(id=${appointment.id})}" method="post">
+  <input type="hidden" name="email" th:value="${email}"> <!-- Keep user email -->
+
+
+  <label for="appointmentDate">Date:</label>
+  <input type="text" id="appointmentDate" name="appointmentDate" th:value="${appointment.appointmentDate}" required>
+
+
+  <label for="appointmentTime">Time:</label>
+  <input type="text" id="appointmentTime" name="appointmentTime" th:value="${appointment.appointmentTime}" required>
+
+
+  <label for="description">Description:</label>
+  <textarea id="description" name="description" required th:text="${appointment.description}"></textarea>
+
+
+  <button type="submit">Update Appointment</button>
+</form>
+
+
+<a th:href="@{/users/appointments(email=${email})}">Cancel</a>
+
+
+</body>
+</html>
